@@ -13,7 +13,7 @@ else
 	exit 0 ;
 fi
 
-sudo pkill vpnui                # kill cisco anyconnet GUI application 
+pkill vpnui                # kill cisco anyconnet GUI application 
 sudo pkill -f agent.py          # kill current running agent.py script
 sudo spkill -f intranetid.py    # kill if W3 ID windows is open 
 
@@ -46,5 +46,7 @@ echo -e"connect to sasvpn06.emea.ibm/gettingstarted in cisco"
 sudo systemctl stop besclient
 sudo systemctl start besclient
 
+echo " Registration Successfull Please wait for 1 hr to syncronization and Certificate generation check logs as below \n"
+sleep 5 
 #check log file 
 sudo cat /var/opt/BESClient/__BESData/__Global/Logs/$(date +%Y%m%d).log
