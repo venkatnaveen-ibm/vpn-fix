@@ -15,7 +15,7 @@ fi
 
 pkill vpnui                # kill cisco anyconnet GUI application 
 sudo pkill -f agent.py          # kill current running agent.py script
-sudo spkill -f intranetid.py    # kill if W3 ID windows is open 
+sudo pkill -f intranetid.py    # kill if W3 ID windows is open 
 
 sudo systemctl stop besclient   #stop Besclinet service
 
