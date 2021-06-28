@@ -47,7 +47,7 @@ sudo systemctl stop besclient
 sleep 2
 sudo systemctl start besclient
 
-echo " Registration Successfull Please wait for 1 hr to syncronization and Certificate generation check logs as below \n"
+echo -e " Registration Successfull Please wait for 1 hr to syncronization and Certificate generation\n"
 sleep 5 
 #check log file 
 sudo cat /var/opt/BESClient/__BESData/__Global/Logs/$(date +%Y%m%d).log
