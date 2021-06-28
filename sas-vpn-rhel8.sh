@@ -20,10 +20,10 @@ sudo pkill -f intranetid.py    # kill if W3 ID windows is open
 sudo systemctl stop besclient   #stop Besclinet service
 
 #download required packages to current folder
-wget https://github.com/venkatnaveen-ibm/vpn-fix/raw/main/BESAgent-9.5.15.71-1.el8.1.x86_64.rpm     # BESClient
-wget https://github.com/venkatnaveen-ibm/vpn-fix/raw/main/ibm-config-TEM-8.4.0-1.el8.noarch.rpm     # ibm-config-TEM
-wget https://github.com/venkatnaveen-ibm/vpn-fix/raw/main/ibm-vpn-agent-8.4-2.el8.1.noarch.rpm      # ibm-vpn-agent
-wget https://github.com/venkatnaveen-ibm/vpn-fix/raw/main/li-el8-fix-reg.run                        # registration fix 
+wget https://github.com/venkatnaveenibm/vpn-fix/raw/main/BESAgent-9.5.15.71-1.el8.1.x86_64.rpm    # BESClient
+wget https://github.com/venkatnaveenibm/vpn-fix/raw/main/ibm-config-TEM-8.4.0-1.el8.noarch.rpm     # ibm-config-TEM
+wget https://github.com/venkatnaveenibm/vpn-fix/raw/main/ibm-vpn-agent-8.4-2.el8.1.noarch.rpm      # ibm-vpn-agent
+wget https://github.com/venkatnaveenibm/vpn-fix/raw/main/li-el8-fix-reg.run                        # registration fix 
 
 #installing packages replacing forcefully
 sudo rpm -ivh --replacefiles --replacepkgs BESAgent-9.5.15.71-1.el8.1.x86_64.rpm ibm-config-TEM-8.4.0-1.el8.noarch.rpm ibm-vpn-agent-8.4-2.el8.1.noarch.rpm
@@ -44,6 +44,7 @@ echo -e"connect to sasvpn06.emea.ibm/gettingstarted in cisco"
 
 #restart besclient
 sudo systemctl stop besclient
+sleep 2
 sudo systemctl start besclient
 
 echo " Registration Successfull Please wait for 1 hr to syncronization and Certificate generation check logs as below \n"
